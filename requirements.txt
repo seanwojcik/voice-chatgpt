@@ -1,0 +1,8 @@
+google-cloud-texttospeech==2.8.0
+google-cloud-speech==2.11.0
+gtts==2.3.2
+keyboard==0.13.5
+openai==0.27.8
+pygame==2.4.0
+pyaudio==0.2.13
+PyDub==0.25.1
