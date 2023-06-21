@@ -10,7 +10,7 @@ from chatgpt_api import chat_gpt, extract_message
 def main(api_key, system_description):
     messages = []
     if system_description is None:
-        system_description = "You are helpful AI bot. Only speak one or two sentences at a time. Be friendly, accurate, and helpful. Ask questions to keep the conversation going."
+        system_description = "You are a helpful AI bot. Only speak one or two sentences at a time. Be friendly, accurate, and helpful. Ask questions to keep the conversation going."
 
     while True:
         # Record user input
