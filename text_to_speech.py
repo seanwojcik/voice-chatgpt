@@ -1,5 +1,9 @@
 # text_to_speech.py
 
+import os
+
+os.environ["PYGAME_HIDE_SUPPORT_PROMPT"] = "hide"
+
 import pygame
 
 # from IPython.display import Audio
@@ -12,6 +16,7 @@ def text_to_speech(text, filename):
 
 
 def play_audio(filename):
+    # Add variable to OS env
     pygame.mixer.init()
     pygame.mixer.music.load(filename)
     pygame.mixer.music.play()
