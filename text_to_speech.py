@@ -16,7 +16,6 @@ def text_to_speech(text, filename):
 
 
 def play_audio(filename):
-    # Add variable to OS env
     pygame.mixer.init()
     pygame.mixer.music.load(filename)
     pygame.mixer.music.play()
