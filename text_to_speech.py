@@ -1,26 +1,16 @@
-# text_to_speech.py
-
 import os
+import subprocess
 
 os.environ["PYGAME_HIDE_SUPPORT_PROMPT"] = "hide"
 
-import pygame
 
-# from IPython.display import Audio
-from gtts import gTTS
-
-
-def text_to_speech(text, filename):
-    tts = gTTS(text=text, lang="en-GB")
-    tts.save(filename)
-
-
-def play_audio(filename):
-    pygame.mixer.init()
-    pygame.mixer.music.load(filename)
-    pygame.mixer.music.play()
-
-    while pygame.mixer.music.get_busy():
-        pygame.time.Clock().tick(10)
-
-    pygame.mixer.quit()
+def text_to_speech(text, voice="Samantha"):
+    """
+    Uses the "say" command on macOS to convert text to speech and say it.
+    """
+    try:
+        subprocess.run(["say", text, "-v", voice])
+    except FileNotFoundError:
+        print("The 'say' command is not found. Make sure you are on macOS.")
+    except Exception as e:
+        print(f"An error occurred: {e}")

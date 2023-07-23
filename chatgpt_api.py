@@ -1,6 +1,3 @@
-# chatgpt_api.py
-
-import os
 import openai
 
 
